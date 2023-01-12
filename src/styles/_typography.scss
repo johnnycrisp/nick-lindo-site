@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500&display=swap');
+
+$font-primary: 'Hanken Grotesk', sans-serif;
+
+
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: 0.18s linear all;
+}
+
+body {
+  color: black;
+  font-family: $font-primary;
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  li {
+    font-size : 14px;
+  }
+}
