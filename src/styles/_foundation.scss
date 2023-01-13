@@ -3,17 +3,13 @@
  }
  
  a {
-     color: black;
+     color: white;
      text-decoration: none;
 
-     &:hover {
-        text-decoration: underline spacing;
-     }
-     &:visited {
-        color: black;
-        text-decoration: none;
-     }
+ }
 
+ .site__wrapper {
+   padding: 4rem;
  }
 
  

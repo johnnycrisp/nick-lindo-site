@@ -1,0 +1,9 @@
+.home__links {
+    display: flex;
+    flex-direction: column;
+
+    a {
+        font-size: 3.5rem;
+        padding-bottom: .5rem;
+    }
+}
