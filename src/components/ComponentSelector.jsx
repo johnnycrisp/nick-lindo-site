@@ -2,13 +2,14 @@ import * as React from "react"
 
 export default function ComponentSelector({ components }) {
     console.log('components', components)
+
   return (
     <>
-      {components?.map(component => {
+      {/* {components?.map(component => {
         switch (component?.componentId) {
           case "portfolio_block":
             return (
-              <PortfolioBlock
+              <VideoFrame
                 key={component.projectTitle}
                 component={component}
               />
@@ -57,7 +58,7 @@ export default function ComponentSelector({ components }) {
           default:
             break
         }
-      })}
+      })} */}
     </>
   )
 }

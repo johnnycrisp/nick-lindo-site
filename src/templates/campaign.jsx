@@ -1,23 +1,27 @@
 import { graphql } from 'gatsby'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import React from 'react'
+import CampaignHeader from '../components/CampaignHeader'
+import ComponentSelector from '../components/ComponentSelector'
 import Layout from '../components/Layout'
+import VideoFrame from '../components/VideoFrame'
 
-const Campaign = ({data, pageContext}) => {
+const Campaign = ({data}) => {
     const campaign = data.campaign
-    const coverImage = campaign.coverImage
     console.log('campaign', campaign)
+
+    const blocks = campaign.campaignContent[0].campaignBlocks
+
+    console.log('blocks', blocks)
 
   return (
     <Layout>
-        <h1>{campaign.title}</h1>
-        <div>
-            <h3>The brief</h3>
-            <div dangerouslySetInnerHTML={{__html: campaign.introText}}></div>
-        </div>
-        <div>
-        <GatsbyImage alt={`Still from ${campaign.title}`} className="campaign__cover-image" image={getImage(coverImage)}/>
-        </div>
+        <CampaignHeader campaign={campaign} />
+        {/* <VideoFrame 
+        videoSrcURL="https://www.youtube.com/embed/hv6yOfyLbLc?controls=0" 
+        videoTitle="Official Music Video on YouTube"/> */}
+        <ComponentSelector 
+          components={blocks}
+        />
     </Layout>
     
   )
@@ -34,6 +38,47 @@ query CampaignTitleQuery($pageId: String) {
     introText
     coverImage {
         gatsbyImageData(placeholder: BLURRED)
+    }
+    campaignContent {
+      campaignBlocks {
+        ... on DatoCmsTextSection {
+          id
+          text
+          subtitle
+          title
+          internal {
+            type
+          }
+        }
+        ... on DatoCmsSingleVideo {
+          id
+          internal {
+            type
+          }
+          videoLink {
+            url
+            title
+          }
+        }
+        ... on DatoCmsImageGallery {
+          id
+          internal {
+            type
+          }
+          images {
+            gatsbyImageData(placeholder: BLURRED)
+          }
+        }
+        ... on DatoCmsSingleImage {
+          id
+          internal {
+            type
+          }
+          singleImage {
+            gatsbyImageData(placeholder: BLURRED)
+          }
+        }
+      }
     }
   }
 }`
