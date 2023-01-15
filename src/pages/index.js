@@ -8,7 +8,7 @@ const Index = ({data}) => {
 
   const campaigns = data.campaigns.nodes
   return (
-    <Layout>
+    <Layout className="index">
       <div className="home__links">
         {campaigns.map((campaign)=> {
         return (

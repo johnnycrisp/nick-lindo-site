@@ -12,6 +12,49 @@
     }
 }
 
+.index {
+    nav {
+        display: none;
+    }
+}
+
+// Nav 
+
+nav {
+
+    position: relative;
+    margin-bottom: 5rem;
+    margin-top: -2.5rem;
+
+    img {
+        height: 4rem;
+    }
+
+    ul {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+}
+
+//Footer 
+
+footer {
+    display: flex;
+    margin-top: 3rem;
+    margin-bottom: -1rem;
+    justify-content: center;
+    
+    p {
+        font-size: 14px;
+    }
+}
+
 //Campaign header 
 
 .campaign__wrapper {
@@ -20,24 +63,38 @@
     gap: 2rem;
 
     h1 {
-        font-size: 4rem;
+        font-size: 5rem;
         margin-bottom: 8rem;
     }
+
+
+    // .campaign__subtitle {
+    //     animation: x 5s linear infinite alternate;
+
+    // }
+
+    // @keyframes x {
+    //     100% {
+    //         transform: translateX(calc(100% - 25%));
+    //     }
+    // }
 
     h2 {
         font-size: 2rem;
     }
 
     .campaign__intro {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        max-width: 75%;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 3rem;
+        margin-bottom: 5rem;
 
         h3 {
             font-size: 1.5rem;
             font-weight: bold;
+            margin-bottom: 1rem;
         }
+
 
     }
 
@@ -50,22 +107,56 @@
 }
 
 
-// VideoFrame
+
+//Campaign Componentes
 
 
-.video {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
-    height: 0;
-    margin-top: 2rem;;
+.campaign__components-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
 
-    iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
+    .campaign__single-image {
         width: 100%;
-        height: 100%;
+    }
+
+    .image__gallery {
+        display: flex;
+        gap: 1rem;
+    }
+
+    // VideoFrame
+
+
+    .video {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        height: 0;
+        margin-top: 2rem;;
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+        }
 
     }
 
+    .campaign__text-section {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 5rem;
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+    }
+
+
 }
+

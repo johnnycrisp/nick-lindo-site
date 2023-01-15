@@ -1,10 +1,15 @@
 import React from "react"
-const VideoFrame = ({ videoSrcURL, videoTitle, ...props }) => (
+const VideoFrame = ({ component }) => { 
+
+    const videoId = component.videoLink.url.slice(- 11)
+
+   return (
+
   <div className="video">
     <iframe
-      src={videoSrcURL}
-      title={videoTitle}
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      src={`https://www.youtube.com/embed/${videoId}`}
+      title={component.videoLink.title}
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share"
       frameBorder="0"
       webkitallowfullscreen="true"
       mozallowfullscreen="true"
@@ -13,4 +18,5 @@ const VideoFrame = ({ videoSrcURL, videoTitle, ...props }) => (
     />
   </div>
 )
+}
 export default VideoFrame

@@ -6,9 +6,9 @@ import Nav from './Nav'
 const Layout = ({children}) => {
   return (
     <div className="site__wrapper">
-        {/* <Nav /> */}
+        <Nav />
         <main>{children}</main>
-        {/* <Footer /> */}
+        <Footer />
     </div>
     
   )

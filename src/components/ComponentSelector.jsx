@@ -1,64 +1,40 @@
 import * as React from "react"
+import ImageGallery from "./ImageGallery"
+import SingleImage from "./SingleImage"
+import TextSection from "./TextSection"
+import VideoFrame from "./VideoFrame"
 
 export default function ComponentSelector({ components }) {
     console.log('components', components)
 
   return (
-    <>
-      {/* {components?.map(component => {
-        switch (component?.componentId) {
-          case "portfolio_block":
+    <div className="campaign__components-wrapper">
+      {components?.map(component => {
+        switch (component?.internal.type) {
+          case "DatoCmsSingleVideo":
             return (
-              <VideoFrame
-                key={component.projectTitle}
+              <VideoFrame 
+                key={component.id}
                 component={component}
               />
             )
-         case "video_section":
+         case "DatoCmsTextSection":
             return (
-              <VideoSection key={component.componentId} component={component} />
+              <TextSection key={component.id} component={component} />
             )
-          case "text_photo_block":
+          case "DatoCmsSingleImage":
             return (
-              <TextPhotoBlock key={component.heading} component={component} />
+              <SingleImage key={component.id} component={component} />
             )
-          case "form_section":
+          case "DatoCmsImageGallery":
             return (
-              <FormSection key={component.componentId} component={component} />
+              <ImageGallery key={component.id} component={component} />
             )
-          case "basic_text":
-            return (
-              <TextBlock key={component.componentId} component={component} />
-            )
-          case "blog_grid":
-            return (
-              <BlogGrid key={component.componentId} component={component} />
-            )
-          case "page_intro":
-            return (
-              <PageIntro key={component.componentId} component={component} />
-            )
-          case "accordion":
-            return (
-              <Accordion key={component.componentId} component={component} />
-            )
-          case "curator_widget":
-            return (
-              <CuratorWidget
-                key={component.componentId}
-                component={component}
-              />
-            )
-          case "blog_post_photo_block":
-            return (
-              <BlogPhoto key={component.componentId} component={component} />
-            )
-          case "parallax_cta":
-            return <ParallaxCTA key={component.text} component={component} />
+        
           default:
             break
         }
-      })} */}
-    </>
+      })}
+    </div>
   )
 }
