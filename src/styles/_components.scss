@@ -92,7 +92,7 @@ footer {
         h3 {
             font-size: 1.5rem;
             font-weight: bold;
-            margin-bottom: 1rem;
+            margin: 1rem 0;
         }
 
 
@@ -158,5 +158,25 @@ footer {
     }
 
 
+}
+
+// Pagination 
+
+.pagination__wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+
+    .pagination__home, .pagination__next {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    
 }
 

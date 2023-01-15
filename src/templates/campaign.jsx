@@ -3,6 +3,7 @@ import React from 'react'
 import CampaignHeader from '../components/CampaignHeader'
 import ComponentSelector from '../components/ComponentSelector'
 import Layout from '../components/Layout'
+import Pagination from '../components/Pagination'
 import VideoFrame from '../components/VideoFrame'
 
 const Campaign = ({data}) => {
@@ -22,6 +23,7 @@ const Campaign = ({data}) => {
         <ComponentSelector 
           components={blocks}
         />
+        <Pagination />
     </Layout>
     
   )
