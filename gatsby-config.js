@@ -8,8 +8,9 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `nick-site`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: `Nick + Seb`,
+    siteUrl: `https://www.yourdomain.tld`,
+    author: `Nick or Seb`
   },
   plugins: [{
     resolve: 'gatsby-source-datocms',
@@ -23,5 +24,12 @@ module.exports = {
       "path": "./src/images/"
     },
     __key: "images"
+  },
+  {
+    resolve: `gatsby-plugin-manifest`,
+    options: {
+      name: `nick-seb`,
+      icon: `src/images/cat.gif`, // This path is relative to the root of the site.
+    }
   }]
 };

@@ -4,6 +4,7 @@ import CampaignHeader from '../components/CampaignHeader'
 import ComponentSelector from '../components/ComponentSelector'
 import Layout from '../components/Layout'
 import Pagination from '../components/Pagination'
+import Seo from '../components/Seo'
 
 
 const Campaign = ({data}) => {
@@ -17,6 +18,7 @@ const Campaign = ({data}) => {
 
   return (
     <Layout>
+    <Seo title={campaign.title} />
         <CampaignHeader campaign={campaign} />
         <ComponentSelector 
           components={blocks}

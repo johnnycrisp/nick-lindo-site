@@ -1,6 +1,7 @@
 import { graphql, Link } from "gatsby"
 import React from "react"
 import Layout from "../components/Layout"
+import Seo from "../components/Seo"
 
 
 const Index = ({data}) => {
@@ -10,6 +11,7 @@ const Index = ({data}) => {
   console.log(campaigns)
   return (
     <Layout className="index">
+    <Seo title="Home" />
       <ul className="home__links">
         {campaigns.map((campaign)=> {
         return (
