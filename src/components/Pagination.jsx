@@ -1,7 +1,9 @@
 import { Link } from 'gatsby'
 import React from 'react'
 
-const Pagination = () => {
+const Pagination = ({campaigns}) => {
+    console.log('pagination', campaigns)
+
   return (
     <div className="pagination__wrapper">
         <div className="pagination__home">

@@ -4,22 +4,19 @@ import CampaignHeader from '../components/CampaignHeader'
 import ComponentSelector from '../components/ComponentSelector'
 import Layout from '../components/Layout'
 import Pagination from '../components/Pagination'
-import VideoFrame from '../components/VideoFrame'
+
 
 const Campaign = ({data}) => {
     const campaign = data.campaign
     console.log('campaign', campaign)
 
-    const blocks = campaign.campaignContent[0].campaignBlocks
+    const blocks = campaign.campaignContent[0]?.campaignBlocks
 
     console.log('blocks', blocks)
 
   return (
     <Layout>
         <CampaignHeader campaign={campaign} />
-        {/* <VideoFrame 
-        videoSrcURL="https://www.youtube.com/embed/hv6yOfyLbLc?controls=0" 
-        videoTitle="Official Music Video on YouTube"/> */}
         <ComponentSelector 
           components={blocks}
         />
@@ -36,6 +33,9 @@ query CampaignTitleQuery($pageId: String) {
   campaign: datoCmsCampaign(originalId: {eq: $pageId}) {
     originalId
     title
+    subtitle
+    campaignDetails
+    position
     slug
     introText
     coverImage {
