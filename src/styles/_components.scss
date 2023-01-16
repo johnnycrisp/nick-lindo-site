@@ -46,8 +46,8 @@ nav {
 
 footer {
     display: flex;
-    margin-top: 3rem;
-    margin-bottom: -1rem;
+    margin-top: 2rem;
+    margin-bottom: -2rem;
     justify-content: center;
     
     p {
@@ -173,7 +173,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 200px;
+    min-height: 200px;
 
     .pagination__home, .pagination__next {
         display: flex;
