@@ -1,4 +1,56 @@
 @media screen and (min-width: 768px) {
+
+    .site__wrapper {
+        padding: 4rem;
+      }
+
+      a, p, li {
+        font-size: 24px;
+      }
+
+
+      .home__links {
+    
+            a {
+                font-size: 3.5rem;
+            }
+        }
+    
+    //campaign header 
+
+    .campaign__wrapper {
+
+        h1 {
+            font-size: 5rem;
+            margin-bottom: 8rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
     
 
+        .campaign__intro {
+            
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin-bottom: 5rem;
+
+        }
+    }
+    
+    // Pagination 
+
+    .pagination__wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .campaign__components-wrapper {
+     
+        .image__gallery {
+            flex-direction: row;
+            gap: 1rem;
+        }
+    }
 }
