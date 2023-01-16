@@ -5,7 +5,7 @@ import TextSection from "./TextSection"
 import VideoFrame from "./VideoFrame"
 
 export default function ComponentSelector({ components }) {
-    console.log('components', components)
+    // console.log('components', components)
 
   return (
     <div className="campaign__components-wrapper">

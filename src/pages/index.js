@@ -6,18 +6,21 @@ import Layout from "../components/Layout"
 const Index = ({data}) => {
 
   const campaigns = data.campaigns.nodes
+  campaigns.sort((a,b) => a.position - b.position)
   console.log(campaigns)
   return (
     <Layout className="index">
-      <div className="home__links">
+      <ul className="home__links">
         {campaigns.map((campaign)=> {
         return (
-        <Link to={campaign.slug}>{campaign.title},</Link>
+        <li>
+          <Link to={campaign.slug}>{campaign.title},</Link>
+        </li>
         )
       })}
      
         <Link to="/about">About.</Link> 
-        </div>
+        </ul>
     </Layout>
   )
 }

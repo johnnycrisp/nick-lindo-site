@@ -24,9 +24,9 @@ const Pagination = ({campaign}) => {
   const nextPage = currentPage + 1
 
 
-  console.log('nextPage', nextPage)
-  console.log('pagesLength', pages.length)
-  console.log('currentPage', currentPage)
+  // console.log('nextPage', nextPage)
+  // console.log('pagesLength', pages.length)
+  // console.log('currentPage', currentPage)
 
   const getNextPage = () => {
 

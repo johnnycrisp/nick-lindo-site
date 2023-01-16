@@ -8,11 +8,12 @@ import Pagination from '../components/Pagination'
 
 const Campaign = ({data}) => {
     const campaign = data.campaign
-    console.log('campaign', campaign)
+ 
 
     const blocks = campaign.campaignContent[0]?.campaignBlocks
 
-    console.log('blocks', blocks)
+    // console.log('campaign', campaign)
+    // console.log('blocks', blocks)
 
   return (
     <Layout>
