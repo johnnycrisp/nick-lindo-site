@@ -20,7 +20,7 @@ const Campaign = ({data}) => {
         <ComponentSelector 
           components={blocks}
         />
-        <Pagination />
+        <Pagination campaign={campaign}/>
     </Layout>
     
   )

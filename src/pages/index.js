@@ -4,9 +4,9 @@ import Layout from "../components/Layout"
 
 
 const Index = ({data}) => {
-  console.log(data.campaigns)
 
   const campaigns = data.campaigns.nodes
+  console.log(campaigns)
   return (
     <Layout className="index">
       <div className="home__links">
@@ -30,6 +30,7 @@ query MyQuery {
     nodes {
       title
       slug
+      position
     }
   }
 }
