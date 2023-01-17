@@ -2,6 +2,8 @@
 
     .site__wrapper {
         padding: 4rem;
+        max-width: 1460px;
+        margin: 0 auto;
 
         footer {
             margin-bottom: -2rem;
@@ -61,4 +63,16 @@
             margin-bottom: 5rem;
         }
     }
+}
+
+@media screen and (min-width: 1520px) {
+
+    .site__wrapper {
+        border: .5rem solid white;
+        // margin-top: 2rem;
+        // margin-bottom: 2rem;
+    }
+
+ 
+
 }
