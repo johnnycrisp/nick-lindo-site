@@ -1,190 +1,161 @@
 .home__links {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    li {
-        margin-bottom: .6rem;
+  li {
+    margin-bottom: 0.6rem;
+  }
+
+  a {
+    font-size: 2rem;
+    width: fit-content;
+    line-height: 1;
+
+    &:hover {
+      font-style: italic;
     }
-
-    a {
-        font-size: 2rem;
-        width: fit-content;
-        line-height: 1;
-
-        &:hover {
-            font-style: italic;
-        }
-    }
+  }
 }
 
-
-// Nav 
+// Nav
 
 nav {
+  position: relative;
+  margin-bottom: 6rem;
+  margin-top: -1rem;
 
-    position: relative;
-    margin-bottom: 6rem;
-    margin-top: -1rem;
+  img {
+    height: 4rem;
+  }
 
-    img {
-        height: 4rem;
-    }
-
-    ul {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-
+  ul {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 
-//Footer 
+//Footer
 
 footer {
-    display: flex;
-    margin: 2rem 0;
-    justify-content: center;
-    
-    p {
-        font-size: 14px;
-    }
+  display: flex;
+  margin: 2rem 0;
+  justify-content: center;
+
+  p {
+    font-size: 14px;
+  }
 }
 
-//Campaign header 
+//Campaign header
 
 .campaign__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .campaign__intro {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
+    margin-bottom: 2rem;
 
-    h1 {
-        font-size: 3rem;
-        margin-bottom: 3rem;
+    h3 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 1rem 0;
     }
+  }
 
-
-    // .campaign__subtitle {
-    //     animation: x 5s linear infinite alternate;
-
-    // }
-
-    // @keyframes x {
-    //     100% {
-    //         transform: translateX(calc(100% - 25%));
-    //     }
-    // }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    .campaign__intro {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        margin-bottom: 2rem;
-
-        h3 {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin: 1rem 0;
-        }
-
-
-    }
-
-    .campaign__cover-image {
+  .campaign__cover-image {
     height: auto;
     width: 100%;
-    }
-
-
+  }
 }
-
-
 
 //Campaign Componentes
 
-
 .campaign__components-wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
 
-    .campaign__single-image {
-        width: 100%;
-        height: 100%;
+  .campaign__single-image {
+    width: 100%;
+    height: 100%;
 
-        img {
-            width: 100%;
-            height: 100%;
-        }
+    img {
+      width: 100%;
+      height: 100%;
     }
+  }
 
-    .image__gallery {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    // VideoFrame
-
-
-    .video {
-        position: relative;
-        padding-bottom: 56.25%; /* 16:9 */
-        height: 0;
-
-        iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-
-        }
-
-    }
-
-    .campaign__text-section {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        margin-bottom: 2rem;
-
-        h3 {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-    }
-
-
-}
-
-// Pagination 
-
-.pagination__wrapper {
+  .image__gallery {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 200px;
+    gap: 2rem;
+  }
 
-    .pagination__home, .pagination__next {
-        display: flex;
-        padding: 1rem 0;
-        justify-content: center;
-        align-items: center;
+  // VideoFrame
 
-        &:hover {
-            font-style: italic;
-        }
+  .video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
+  }
 
-    
+  .campaign__text-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  }
 }
 
+// Pagination
+
+.pagination__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+
+  .pagination__home,
+  .pagination__next {
+    display: flex;
+    padding: 1rem 0;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      font-style: italic;
+    }
+  }
+}

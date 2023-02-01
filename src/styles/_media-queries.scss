@@ -1,78 +1,60 @@
 @media screen and (min-width: 768px) {
+  .site__wrapper {
+    padding: 4rem;
+    max-width: 1460px;
+    margin: 0 auto;
 
-    .site__wrapper {
-        padding: 4rem;
-        max-width: 1460px;
-        margin: 0 auto;
-
-        footer {
-            margin-bottom: -2rem;
-        }
-      }
-
-      a, p, li {
-        font-size: 24px;
-      }
-
-
-      .home__links {
-    
-            a {
-                font-size: 3.5rem;
-            }
-        }
-    
-    //campaign header 
-
-    .campaign__wrapper {
-
-        h1 {
-            font-size: 5rem;
-            margin-bottom: 8rem;
-        }
-
-        h2 {
-            font-size: 2rem;
-        }
-    
-
-        .campaign__intro {
-            
-            grid-template-columns: 2fr 1fr;
-            gap: 3rem;
-            margin-bottom: 5rem;
-
-        }
+    footer {
+      margin-bottom: -2rem;
     }
-    
-    // Pagination 
+  }
 
-    .pagination__wrapper {
-        flex-direction: row;
-        justify-content: space-between;
+  a,
+  p,
+  li {
+    font-size: 24px;
+  }
+
+  .home__links {
+    a {
+      font-size: 3.5rem;
+    }
+  }
+
+  //campaign header
+
+  .campaign__wrapper {
+    h1 {
+      font-size: 5rem;
+      margin-bottom: 8rem;
     }
 
-    .campaign__components-wrapper {
-     
-        .image__gallery {
-            flex-direction: row;
-            gap: 1rem;
-        }
-
-        .campaign__text-section {
-            margin-bottom: 5rem;
-        }
+    h2 {
+      font-size: 2rem;
     }
-}
 
-@media screen and (min-width: 1520px) {
+    .campaign__intro {
+      grid-template-columns: 2fr 1fr;
+      gap: 3rem;
+      margin-bottom: 5rem;
+    }
+  }
 
-    // .site__wrapper {
-    //     // border: .5rem solid white;
-    //     // margin-top: 2rem;
-    //     // margin-bottom: 2rem;
-    // }
+  // Pagination
 
- 
+  .pagination__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
+  .campaign__components-wrapper {
+    .image__gallery {
+      flex-direction: row;
+      gap: 1rem;
+    }
+
+    .campaign__text-section {
+      margin-bottom: 5rem;
+    }
+  }
 }
