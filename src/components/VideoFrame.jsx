@@ -5,7 +5,7 @@ const VideoFrame = ({ component }) => {
   return (
     <div className="video">
       <iframe
-        src={`https://www.youtube.com/embed/${videoId}?playlist=${videoId}&loop=1`}
+        src={`https://www.youtube.com/embed/${videoId}`}
         title={component.videoLink.title}
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share"
         frameBorder="0"
